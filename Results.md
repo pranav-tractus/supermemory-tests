@@ -3,7 +3,18 @@
 Each section: chat file, mode, and contract summary.
 
 ---
+## Chat files
 
+- [long_multi_product_single_shipment.json](chats/long_multi_product_single_shipment.json)
+- [long_multi_shipment_multi_product.json](chats/long_multi_shipment_multi_product.json)
+- [long_single_product_same.json](chats/long_single_product_same.json)
+- [long_single_product_single_shipment.json](chats/long_single_product_single_shipment.json)
+- [short_multi_product_single_shipment.json](chats/short_multi_product_single_shipment.json)
+- [short_multi_shipment_multi_product.json](chats/short_multi_shipment_multi_product.json)
+- [short_single_product_same.json](chats/short_single_product_same.json)
+- [short_single_product_single_shipment.json](chats/short_single_product_single_shipment.json)
+
+---
 
 
 
