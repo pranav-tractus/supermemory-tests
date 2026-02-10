@@ -1,0 +1,259 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good morning. We need to place our monthly consolidated order.",
+      "timestamp": 1760000000
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good morning. What items do you need?",
+      "timestamp": 1760000040
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "KNM Coffee, Assam tea, copy paper, and hand sanitizer.",
+      "timestamp": 1760000080
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Quantities for each?",
+      "timestamp": 1760000120
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "8 bags coffee, 20 boxes tea, 40 reams paper, 24 bottles sanitizer 500ml.",
+      "timestamp": 1760000160
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Coffee $25/bag, tea $12/box, paper $4/ream, sanitizer $8/bottle min 24.",
+      "timestamp": 1760000200
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes, single delivery. Preferred date December 5.",
+      "timestamp": 1760000320
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "December 5 works. Delivery address?",
+      "timestamp": 1760000360
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "100 Finance Ave Singapore 018989.",
+      "timestamp": 1760000400
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. Can we get 5% for order above $750? Brings it to $752.40.",
+      "timestamp": 1760000440
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We can do 3% — $768.24.",
+      "timestamp": 1760000480
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Accepted. $768.24, one shipment Dec 5.",
+      "timestamp": 1760000520
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Our PO is PO-2024-12-002. Net 30 from delivery.",
+      "timestamp": 1760000560
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Confirmed. I'll generate the sales order for all four lines.",
+      "timestamp": 1760000600
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Tea is 50 sachets per box, correct?",
+      "timestamp": 1760000640
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, 50 sachets per box. Paper is A4 80gsm.",
+      "timestamp": 1760000680
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Sanitizer is pump bottle?",
+      "timestamp": 1760000720
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, 500ml pump. All standard specs.",
+      "timestamp": 1760000760
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Please send itemized invoice to procurement@company.com.",
+      "timestamp": 1760000800
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Will do. SO will list each product and line total.",
+      "timestamp": 1760000840
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Any lead time for paper? We need it by Dec 5.",
+      "timestamp": 1760000880
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "All items will ship together. Dec 5 confirmed.",
+      "timestamp": 1760000920
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Understood. Single delivery for all four products.",
+      "timestamp": 1760000960
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "SO-2024-1202. Coffee, tea, paper, sanitizer. One DO for Dec 5.",
+      "timestamp": 1760001000
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Received. FOB Singapore?",
+      "timestamp": 1760001040
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, FOB Singapore. Freight to your account if you need separate logistics.",
+      "timestamp": 1760001080
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll use your delivery. Same as last month.",
+      "timestamp": 1760001120
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Morning slot 9-12. We'll confirm 48 hours before.",
+      "timestamp": 1760001160
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Contact at receiving: +65 9123 4567.",
+      "timestamp": 1760001200
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. Anything else on this order?",
+      "timestamp": 1760001240
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "No. That's everything.",
+      "timestamp": 1760001280
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Thank you. We'll send the delivery note on Dec 5.",
+      "timestamp": 1760001320
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thanks. Bye.",
+      "timestamp": 1760001360
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760001400
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Quick check — 8 coffee, 20 tea, 40 paper, 24 sanitizer, total $768.24.",
+      "timestamp": 1760001440
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Correct. All confirmed.",
+      "timestamp": 1760001480
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good.",
+      "timestamp": 1760001520
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "If you need to add anything, let us know before Dec 2.",
+      "timestamp": 1760001560
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Will do.",
+      "timestamp": 1760001600
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Reminder: order cut-off for Dec 5 is Dec 2 noon. No changes after that.",
+      "timestamp": 1760001640
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood. We have you down for the full four-line order.",
+      "timestamp": 1760001680
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Billing contact remains finance@company.com?",
+      "timestamp": 1760001720
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Invoice will be sent there post-delivery.",
+      "timestamp": 1760001760
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Thanks.",
+      "timestamp": 1760001800
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome.",
+      "timestamp": 1760001840
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Can we get a packing list with the delivery?",
+      "timestamp": 1760001880
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Driver will have delivery note and packing list.",
+      "timestamp": 1760001920
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Perfect. That's all.",
+      "timestamp": 1760001960
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good day.",
+      "timestamp": 1760002000
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "You too. Bye.",
+      "timestamp": 1760002040
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760002080
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good morning. We'd like to place our usual monthly order \u2014 KNM Coffee, same as last month.",
+      "timestamp": 1760000045
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good morning. I have November on file \u2014 5 bags to Changi Hospital Wars 24 Singapore 700339. Same for December?",
+      "timestamp": 1760000085
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. Same quantity, same address. We've been doing 5 bags a month for a while.",
+      "timestamp": 1760000118
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "5 bags at $25, $125. Delivery date?",
+      "timestamp": 1760000158
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "December 3. Same receiving \u2014 Gate A, +65 8765 4321 Stores.",
+      "timestamp": 1760000196
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're thinking of adding tea and maybe paper from you from January. Do you do a combined discount for multiple lines?",
+      "timestamp": 1760000243
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We do. For multi-line orders we often apply a percentage off the total. When you have quantities we can quote.",
+      "timestamp": 1760000283
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "For now we'll stick to coffee. But we'd like a standing discount for the 5 bags per month. We're in for the long term.",
+      "timestamp": 1760000331
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "For a standing commitment we can do 5% \u2014 $23.75 per bag, $118.75 per order. We'd want at least three months.",
+      "timestamp": 1760000369
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Could we get 6% if we commit to 12 months? We might also increase to 6 bags from January for a new ward.",
+      "timestamp": 1760000403
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "For 12 months we can do 6% \u2014 $23.50 per bag. That would apply to 5 or 6 bags per order under the same arrangement.",
+      "timestamp": 1760000447
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll take 6% from this December order. We'll sign something if you send a short letter.",
+      "timestamp": 1760000490
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll send a confirmation letter. December: 5 bags at $23.50 = $117.50. PO?",
+      "timestamp": 1760000520
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "PO-2024-12-202. Net 30 from delivery. Invoice to accounts@hospital.sg.",
+      "timestamp": 1760000570
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We had one bag damaged in October \u2014 corner of the bag. We didn't claim. Can you reinforce packaging a bit?",
+      "timestamp": 1760000606
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. I'll add a note for the warehouse. If it happens again please report and we'll replace.",
+      "timestamp": 1760000655
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "For January we might need 6 bags. Same address. Would the 6% apply?",
+      "timestamp": 1760000702
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Once the letter is signed, 6 bags would be $141 at $23.50 each.",
+      "timestamp": 1760000750
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "SO-2024-1205 for December \u2014 5 bags, Dec 3, Changi. I'll send the letter by Friday.",
+      "timestamp": 1760000787
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Our legal might have small comments on the letter. Is that okay?",
+      "timestamp": 1760000831
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Send comments and we'll revise.",
+      "timestamp": 1760000872
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're also considering sanitizer for the new ward. What's your min order?",
+      "timestamp": 1760000925
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Sanitizer 500ml is $8/bottle, minimum 24 bottles.",
+      "timestamp": 1760000979
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're not ordering it this month. Just checking for later.",
+      "timestamp": 1760001017
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "No problem. When you're ready we can add it to a future delivery.",
+      "timestamp": 1760001062
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "So December is just 5 bags coffee, Dec 3, Changi. Nothing else.",
+      "timestamp": 1760001105
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Correct. Same specs \u2014 1kg bags, one carton of 5.",
+      "timestamp": 1760001158
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Delivery note on the day as usual?",
+      "timestamp": 1760001197
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. We'll send it electronically.",
+      "timestamp": 1760001236
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "When will the 12-month letter arrive? We want to get it signed before year-end.",
+      "timestamp": 1760001270
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "By Friday. It'll state 6% off for orders of 5+ bags per month for 12 months.",
+      "timestamp": 1760001301
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If we go to 6 bags in January do we need to amend the letter?",
+      "timestamp": 1760001342
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can word it as 5\u20138 bags per month so you have flexibility without amending.",
+      "timestamp": 1760001375
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Thanks. That's all for this order.",
+      "timestamp": 1760001420
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Do we need to sign the letter and send it back or is an email acceptance enough?",
+      "timestamp": 1760001455
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "A signed copy is better for our files. We can also accept an email from your procurement lead confirming the terms.",
+      "timestamp": 1760001500
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll get it signed. Might take a week.",
+      "timestamp": 1760001544
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If we skip a month \u2014 say we have too much stock in February \u2014 does that break the 12-month deal?",
+      "timestamp": 1760001595
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'd need to clarify in the letter. Usually we allow one skip in 12 months if you give notice. We can put that in.",
+      "timestamp": 1760001639
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We probably won't skip. Just wanted to know.",
+      "timestamp": 1760001688
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "The damaged bag in October \u2014 was that from a specific batch? We logged it internally.",
+      "timestamp": 1760001728
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "I don't have the batch number to hand. We can check if you need it for your records.",
+      "timestamp": 1760001767
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Not critical. Just checking. December order is the priority.",
+      "timestamp": 1760001807
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Can you send the letter to legal@hospital.sg as well? They need to review before we sign.",
+      "timestamp": 1760001851
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll send the letter to you and you can forward, or we can cc legal if you give the address.",
+      "timestamp": 1760001899
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll forward. Thanks.",
+      "timestamp": 1760001951
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "That's everything. We'll confirm when the SO is received and when the letter is signed.",
+      "timestamp": 1760001993
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If we add hand sanitizer to a future order can it come on the same truck as the coffee?",
+      "timestamp": 1760002035
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Multi-line orders ship together to the same address.",
+      "timestamp": 1760002072
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're not adding it yet. Maybe from February.",
+      "timestamp": 1760002122
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "The 6% \u2014 does it apply to decaf too if we ever order that?",
+      "timestamp": 1760002160
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'd need to confirm. Decaf is a different SKU; standing discount might or might not apply. We can add it to the letter if you want.",
+      "timestamp": 1760002197
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll stick to regular for now. Just curious.",
+      "timestamp": 1760002247
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "No problem.",
+      "timestamp": 1760002288
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thanks again. Bye.",
+      "timestamp": 1760002336
+    }
+  ]
+}

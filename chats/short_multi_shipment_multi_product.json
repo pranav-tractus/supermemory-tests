@@ -1,0 +1,264 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Hi. We need a large order but want it split across multiple delivery dates.",
+      "timestamp": 1760100000
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can do multiple shipments. What do you need?",
+      "timestamp": 1760100040
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "KNM Coffee, Assam tea, copy paper, and Red Balloons.",
+      "timestamp": 1760100080
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Quantities?",
+      "timestamp": 1760100120
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "12 bags coffee, 30 boxes tea, 50 reams paper, 3000 balloons.",
+      "timestamp": 1760100160
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Coffee $250, tea $360, paper $200, balloons $9k (3x1000). Total $9810.",
+      "timestamp": 1760100200
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Can we do three shipments? Coffee first, then tea and paper, then balloons.",
+      "timestamp": 1760100240
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. When for shipment 1?",
+      "timestamp": 1760100280
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Nov 28 — 12 bags coffee only.",
+      "timestamp": 1760100320
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Shipment 2?",
+      "timestamp": 1760100360
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Dec 5 — 30 tea, 50 paper. Same address.",
+      "timestamp": 1760100400
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Shipment 3?",
+      "timestamp": 1760100440
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Dec 12 — 3000 balloons. Changi Hospital Wars 24 Singapore 700339.",
+      "timestamp": 1760100480
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Same address for all three?",
+      "timestamp": 1760100520
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Shipments 1 and 2 to 100 Finance Ave. Shipment 3 to Changi as above.",
+      "timestamp": 1760100560
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. One SO, three DOs. Shipment 1: 12 bags coffee Nov 28, Finance Ave.",
+      "timestamp": 1760100600
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Correct. PO-2024-11-301.",
+      "timestamp": 1760100720
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Net 30 from first or last delivery?",
+      "timestamp": 1760100760
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "From last delivery — Dec 12.",
+      "timestamp": 1760100800
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Payment due Jan 11. I'll raise SO-2024-1300 with three DOs.",
+      "timestamp": 1760100840
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Balloons in 1000-per-box packaging?",
+      "timestamp": 1760100880
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, 3 boxes of 1000. Tea 50 sachets/box, paper A4 80gsm.",
+      "timestamp": 1760100920
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Any discount for the full order?",
+      "timestamp": 1760100960
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can do 2% on orders above $9k — $9613.80.",
+      "timestamp": 1760101000
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Accepted.",
+      "timestamp": 1760101040
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "SO-2024-1300 sent. DO-2024-1128, DO-2024-1205, DO-2024-1212.",
+      "timestamp": 1760101080
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Received. All three addresses are correct on the DOs?",
+      "timestamp": 1760101120
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. DO1 and DO2 show Finance Ave; DO3 shows Changi.",
+      "timestamp": 1760101160
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Perfect. If we need to shift Dec 5 by a day, when's the cutoff?",
+      "timestamp": 1760101200
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Please confirm by Dec 2. We can move to Dec 6 if needed.",
+      "timestamp": 1760101240
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll keep Dec 5 unless something changes.",
+      "timestamp": 1760101280
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood. Anything else?",
+      "timestamp": 1760101320
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "No. Thanks.",
+      "timestamp": 1760101360
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome. We'll confirm each delivery 48 hours ahead.",
+      "timestamp": 1760101400
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Bye.",
+      "timestamp": 1760101440
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760101480
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Summary: 12 coffee Nov 28, 30 tea + 50 paper Dec 5, 3000 balloons Dec 12. Two addresses.",
+      "timestamp": 1760101520
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. One order, three shipments, $9613.80 Net 30 from Dec 12.",
+      "timestamp": 1760101560
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Correct. Thanks again.",
+      "timestamp": 1760101600
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Anytime.",
+      "timestamp": 1760101640
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If shipment 1 is delayed, will it affect shipment 2 and 3 dates?",
+      "timestamp": 1760101680
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "No. Each shipment is independent. We'll only adjust the affected date.",
+      "timestamp": 1760101720
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good to know.",
+      "timestamp": 1760101760
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll send tracking or confirmation for each DO separately.",
+      "timestamp": 1760101800
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Please send to logistics@company.com as well.",
+      "timestamp": 1760101840
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll add that to the distribution list for the three DOs.",
+      "timestamp": 1760101880
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thanks. Anything else we should confirm before Nov 28?",
+      "timestamp": 1760101920
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Just the receiving contact for each address. We have Finance Ave; please confirm Changi contact.",
+      "timestamp": 1760101960
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Changi: +65 8765 4321, ask for Stores.",
+      "timestamp": 1760102000
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. We're set.",
+      "timestamp": 1760102040
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Bye.",
+      "timestamp": 1760102080
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760102120
+    }
+  ]
+}

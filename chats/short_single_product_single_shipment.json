@@ -1,0 +1,254 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good morning. We need to restock KNM Coffee.",
+      "timestamp": 1760000000
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good morning. How many bags do you need?",
+      "timestamp": 1760000040
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "6 bags. Current rate still $25 per bag?",
+      "timestamp": 1760000080
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, $25 per bag. Total $150.",
+      "timestamp": 1760000120
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Please confirm delivery to 100 Finance Ave Singapore 018989.",
+      "timestamp": 1760000160
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Confirmed. Preferred delivery date?",
+      "timestamp": 1760000200
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "November 28.",
+      "timestamp": 1760000240
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "6 bags KNM Coffee, Nov 28, 100 Finance Ave. I'll raise the sales order.",
+      "timestamp": 1760000280
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Our PO number is PO-2024-11-101.",
+      "timestamp": 1760000320
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. SO will reference PO-2024-11-101.",
+      "timestamp": 1760000360
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Payment terms Net 30 from delivery?",
+      "timestamp": 1760000400
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, Net 30 from delivery date.",
+      "timestamp": 1760000440
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thank you.",
+      "timestamp": 1760000480
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome. We'll send the SO and delivery confirmation shortly.",
+      "timestamp": 1760000520
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Received the SO. All details match.",
+      "timestamp": 1760000560
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Delivery is scheduled for Nov 28, morning slot.",
+      "timestamp": 1760000600
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll ensure someone is available for receipt.",
+      "timestamp": 1760000640
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Please share a contact number for the delivery team.",
+      "timestamp": 1760000680
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "+65 9123 4567, ask for Receiving.",
+      "timestamp": 1760000720
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. Anything else for this order?",
+      "timestamp": 1760000760
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "No, that's all for now.",
+      "timestamp": 1760000800
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood. We'll be in touch if there are any changes.",
+      "timestamp": 1760000840
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thanks again.",
+      "timestamp": 1760000880
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Thank you. Have a good day.",
+      "timestamp": 1760000920
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "One more thing — can we get the SO by end of day?",
+      "timestamp": 1760000960
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, you'll have it by 5 PM.",
+      "timestamp": 1760001000
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Perfect.",
+      "timestamp": 1760001040
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Delivery instructions — any dock or gate preference?",
+      "timestamp": 1760001080
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Main loading bay, Gate B. Security will have the pass.",
+      "timestamp": 1760001120
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. Gate B, main loading bay.",
+      "timestamp": 1760001160
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes.",
+      "timestamp": 1760001200
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Packaging is standard 1kg bags, carton of 10. We'll send 6 bags.",
+      "timestamp": 1760001240
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "That works. No special labelling needed.",
+      "timestamp": 1760001280
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood.",
+      "timestamp": 1760001320
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If the date slips, please advise at least 24 hours ahead.",
+      "timestamp": 1760001360
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We will. Our standard is to confirm 48 hours before delivery.",
+      "timestamp": 1760001400
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good to know.",
+      "timestamp": 1760001440
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Anything else on the coffee order?",
+      "timestamp": 1760001480
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "No, that covers it.",
+      "timestamp": 1760001520
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "SO-2024-1101 has been sent to your email.",
+      "timestamp": 1760001560
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Received. All correct.",
+      "timestamp": 1760001600
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Great. We'll send the delivery note on the day.",
+      "timestamp": 1760001640
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thank you.",
+      "timestamp": 1760001680
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome. Good day.",
+      "timestamp": 1760001720
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "You too. Bye.",
+      "timestamp": 1760001760
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760001800
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll confirm again 24 hours before if our receiving slot changes.",
+      "timestamp": 1760001840
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Please do. It helps us plan the route.",
+      "timestamp": 1760001880
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Understood. Thanks.",
+      "timestamp": 1760001920
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome.",
+      "timestamp": 1760001960
+    }
+  ]
+}

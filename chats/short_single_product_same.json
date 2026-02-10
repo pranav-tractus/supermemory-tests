@@ -1,0 +1,254 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Hi. We'd like to place the same order as last month for KNM Coffee.",
+      "timestamp": 1760200000
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good morning. Last month was 5 bags to Changi Hospital, correct?",
+      "timestamp": 1760200040
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. Same product, same quantity, same address.",
+      "timestamp": 1760200080
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "5 bags KNM Coffee at $25 each, $125. Delivery address Changi Hospital Wars 24 Singapore 700339.",
+      "timestamp": 1760200120
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Correct. Can we get delivery by November 30?",
+      "timestamp": 1760200160
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "November 30 works. Same contact for receiving?",
+      "timestamp": 1760200200
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes, same as before. Receiving dock, Gate A.",
+      "timestamp": 1760200240
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. Net 30 from delivery as before?",
+      "timestamp": 1760200280
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. Our PO is PO-2024-11-401.",
+      "timestamp": 1760200320
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "I'll generate the sales order. Same specs — 1kg bags, carton of 10, we'll send 5 bags.",
+      "timestamp": 1760200360
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. No changes to the product.",
+      "timestamp": 1760200400
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "SO-2024-1102. 5 bags KNM Coffee, Nov 30, Changi Hospital. Sent to your email.",
+      "timestamp": 1760200440
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Received. All details match our standing order.",
+      "timestamp": 1760200480
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll confirm 48 hours before delivery. Morning slot as usual.",
+      "timestamp": 1760200520
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Invoice to same address — accounts@hospital.sg?",
+      "timestamp": 1760200560
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes, we have that on file. Invoice will go there after delivery.",
+      "timestamp": 1760200600
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thank you. We'll likely repeat again next month.",
+      "timestamp": 1760200640
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Just send us the request when you're ready. Same process.",
+      "timestamp": 1760200680
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Understood. Bye.",
+      "timestamp": 1760200720
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760200760
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "One more thing — do you need a new PO every month or can we use a standing PO?",
+      "timestamp": 1760200800
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We need a PO reference per order for our records. Same number series is fine if your system allows.",
+      "timestamp": 1760200840
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll keep issuing monthly POs then. Thanks.",
+      "timestamp": 1760200880
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "No problem. Anything else on this order?",
+      "timestamp": 1760200920
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "No. That's it.",
+      "timestamp": 1760200960
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Thank you. Good day.",
+      "timestamp": 1760201000
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "You too.",
+      "timestamp": 1760201040
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Confirming: 5 bags KNM Coffee, $125, Nov 30, Changi Hospital Wars 24, Net 30, PO-2024-11-401.",
+      "timestamp": 1760201080
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "All correct.",
+      "timestamp": 1760201120
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Great. We're all set.",
+      "timestamp": 1760201160
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Last month's payment was received on time. No issues.",
+      "timestamp": 1760201200
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good to hear. We'll keep the same terms.",
+      "timestamp": 1760201240
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Perfect. Bye.",
+      "timestamp": 1760201280
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760201320
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Quality was consistent last time. No complaints.",
+      "timestamp": 1760201360
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good to hear. We maintain the same batch standards.",
+      "timestamp": 1760201400
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll stick with the same order then.",
+      "timestamp": 1760201440
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Whenever you're ready for next month, just message with the same details.",
+      "timestamp": 1760201480
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Will do. Thanks.",
+      "timestamp": 1760201520
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Thank you. Have a good day.",
+      "timestamp": 1760201560
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "You too.",
+      "timestamp": 1760201600
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Delivery note will reference SO-2024-1102 and your PO.",
+      "timestamp": 1760201640
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Understood. We'll file it with the PO.",
+      "timestamp": 1760201680
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Perfect. We're all set.",
+      "timestamp": 1760201720
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Bye.",
+      "timestamp": 1760201760
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Bye.",
+      "timestamp": 1760201800
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We might need 6 bags in December. We'll confirm when we place that order.",
+      "timestamp": 1760201840
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "No problem. Same process — just specify 6 bags when you're ready.",
+      "timestamp": 1760201880
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. Thanks.",
+      "timestamp": 1760201920
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome.",
+      "timestamp": 1760201960
+    }
+  ]
+}

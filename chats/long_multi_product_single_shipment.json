@@ -1,0 +1,354 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good morning. We need a consolidated order \u2014 coffee, tea, paper, sanitizer. Maybe balloons too.",
+      "timestamp": 1760000050
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Good morning. What quantities are you thinking?",
+      "timestamp": 1760000102
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "8 bags coffee, 20 boxes tea, 40 reams paper, 24 sanitizer. Balloons we're not sure yet.",
+      "timestamp": 1760000144
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Coffee $25/bag, tea $12/box, paper $4/ream, sanitizer $8/bottle min 24. Balloons $3000/1000 when you're ready.",
+      "timestamp": 1760000184
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "So 8\u00d725, 20\u00d712, 40\u00d74, 24\u00d78 \u2014 that's 200, 240, 160, 192. Total $792.",
+      "timestamp": 1760000231
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Correct. Single delivery?",
+      "timestamp": 1760000261
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. December 5. But we might bump coffee to 10 bags and add 3000 balloons. Can you requote?",
+      "timestamp": 1760000308
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "10 coffee $250, 20 tea $240, 40 paper $160, 24 sanitizer $192, 3 boxes balloons $9000. Total $9842.",
+      "timestamp": 1760000362
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Balloons are too expensive for this round. Drop balloons. Keep 10 bags coffee, rest same.",
+      "timestamp": 1760000406
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "10 coffee $250, 20 tea $240, 40 paper $160, 24 sanitizer $192. Total $842.",
+      "timestamp": 1760000460
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Can we get a discount for the combined order?",
+      "timestamp": 1760000510
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "For above $750 we can do 3% \u2014 $816.74.",
+      "timestamp": 1760000553
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We were hoping for 5%. We'll probably order again in January.",
+      "timestamp": 1760000594
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "I can do 4% for this order \u2014 $808.32. If you confirm a January order of similar size we can look at 5% then.",
+      "timestamp": 1760000632
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Okay 4% for now. Single delivery Dec 5 to 100 Finance Ave.",
+      "timestamp": 1760000670
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "PO reference and payment terms?",
+      "timestamp": 1760000706
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "PO-2024-12-102. Net 30 from delivery.",
+      "timestamp": 1760000748
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Actually we need to reduce. Drop the paper \u2014 we'll get it elsewhere. So 10 coffee, 20 tea, 24 sanitizer only.",
+      "timestamp": 1760000787
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "10 coffee $250, 20 tea $240, 24 sanitizer $192. Total $682. With 4% that's $654.72.",
+      "timestamp": 1760000825
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "And tea \u2014 can we do 15 boxes instead of 20? Budget squeeze.",
+      "timestamp": 1760000864
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "15 tea $180. So 10 coffee $250, 15 tea $180, 24 sanitizer $192. Total $622. 4% = $597.12.",
+      "timestamp": 1760000908
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Hold on. We might need the paper after all. Add back 30 reams.",
+      "timestamp": 1760000950
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "30 reams $120. New total $742. 4% = $712.32.",
+      "timestamp": 1760000999
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "30 reams is fine. But can we push delivery to December 6? Our warehouse is tight on the 5th.",
+      "timestamp": 1760001046
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Dec 6 works. I'll note it.",
+      "timestamp": 1760001077
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Scratch that \u2014 keep Dec 5. We'll make it work.",
+      "timestamp": 1760001128
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Reverting to Dec 5.",
+      "timestamp": 1760001177
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Last month we had tea and paper from you. One tea carton was dented. No claim, but can you double-check packing?",
+      "timestamp": 1760001219
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll flag it. Multi-line orders are now picked and packed in one go to avoid mix-ups.",
+      "timestamp": 1760001260
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Invoice to accounts@company.com and procurement@company.com. Itemised please.",
+      "timestamp": 1760001292
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Will do. SO will list each line.",
+      "timestamp": 1760001329
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Do we get early payment discount? We sometimes pay within two weeks.",
+      "timestamp": 1760001377
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We offer 1% for payment within 14 days. Would apply to the net amount.",
+      "timestamp": 1760001427
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll stick to Net 30 for this one.",
+      "timestamp": 1760001467
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood. Receiving contact?",
+      "timestamp": 1760001502
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "+65 9123 4567. Gate B, morning slot.",
+      "timestamp": 1760001543
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "One more change \u2014 sorry. Can we add the paper back at 40 reams not 30? We recalculated.",
+      "timestamp": 1760001585
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "40 reams $160. So 10 coffee, 15 tea, 40 paper, 24 sanitizer. Total $782. 4% = $750.72.",
+      "timestamp": 1760001626
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. That's the final. We won't change again.",
+      "timestamp": 1760001676
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "I'll generate SO-2024-1204 for those four lines, Dec 5, 100 Finance Ave.",
+      "timestamp": 1760001728
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "When do you need order cut-off? In case we think of anything else.",
+      "timestamp": 1760001774
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Ideally 48 hours before delivery. After that we might not be able to add to the same truck.",
+      "timestamp": 1760001820
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're also looking at balloons for a January event. Roughly how much for 5000?",
+      "timestamp": 1760001853
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "5 boxes of 1000 = $15,000 list. We could quote with discount if it's part of a larger January order.",
+      "timestamp": 1760001883
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll come back on that. For now just this order.",
+      "timestamp": 1760001937
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood. SO on its way.",
+      "timestamp": 1760001968
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "FOB Singapore and we use your truck, same as last time?",
+      "timestamp": 1760002003
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes.",
+      "timestamp": 1760002037
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thanks. We'll confirm when we get the SO.",
+      "timestamp": 1760002083
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Actually \u2014 can we add 10 reams of paper to the order? We forgot one department.",
+      "timestamp": 1760002117
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Adding 10 reams: +$40. New total 10 coffee, 15 tea, 50 paper, 24 sanitizer. $822 before 4% = $789.12.",
+      "timestamp": 1760002148
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Wait, we said 40 reams paper. So it's 40 not 50. Sorry for the confusion.",
+      "timestamp": 1760002201
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "So 40 reams. Total stays 10 coffee, 15 tea, 40 paper, 24 sanitizer. $782, 4% = $750.72. That was the last confirmed.",
+      "timestamp": 1760002247
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. 40 reams. Don't add the 10.",
+      "timestamp": 1760002284
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood. 40 reams only.",
+      "timestamp": 1760002315
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Tea is 50 sachets per box right? We had a dispute with another supplier who sent 25.",
+      "timestamp": 1760002354
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Our Assam tea boxes are 50 sachets. It's on the spec sheet we can send with the order.",
+      "timestamp": 1760002400
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Sanitizer \u2014 is it the pump bottle or the flip cap?",
+      "timestamp": 1760002430
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "500ml pump bottle. Same as last month.",
+      "timestamp": 1760002473
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. We prefer the pump for the dispensers.",
+      "timestamp": 1760002522
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If we add balloons later for the same Dec 5 delivery, is it too late?",
+      "timestamp": 1760002571
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'd need to know soon \u2014 at least 5 days before \u2014 to get balloons on the same truck. Otherwise it would be a separate delivery.",
+      "timestamp": 1760002603
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll decide by end of week. Might skip balloons entirely for December.",
+      "timestamp": 1760002654
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "No problem. Order stands as the four lines until you say otherwise.",
+      "timestamp": 1760002701
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Receiving will be different on Dec 5 \u2014 temporary guy. I'll send the name and number before the day.",
+      "timestamp": 1760002755
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Send when you have it. We'll put it on the delivery note.",
+      "timestamp": 1760002792
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Do you do next-day delivery if we run out of something before Dec 5?",
+      "timestamp": 1760002840
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can do expedited for a fee. Lead time is usually 2\u20133 days for small top-ups. Ask when you need it.",
+      "timestamp": 1760002871
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Hope we don't need it. Thanks.",
+      "timestamp": 1760002906
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "That's everything. We'll reply when we've got the SO.",
+      "timestamp": 1760002939
+    }
+  ]
+}

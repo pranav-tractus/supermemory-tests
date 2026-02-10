@@ -1,0 +1,350 @@
+{
+  "messages": [
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We need a big order but can't take everything at once. Coffee, tea, paper, balloons.",
+      "timestamp": 1760000039
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can split into multiple shipments. Quantities and how you want to split?",
+      "timestamp": 1760000069
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "12 bags coffee, 30 boxes tea, 50 reams paper, 4000 balloons. Three shipments if possible.",
+      "timestamp": 1760000113
+    },
+    {
+      
+      "from_whom": "(TEAM1)",
+      "body": "Pricing: coffee $25/bag, tea $12/box, paper $4/ream, balloons $3000/1000. Total 300+360+200+12000 = $12,860. How to split?",
+      "timestamp": 1760000165
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "First shipment: coffee only, Nov 28. Second: tea and paper, Dec 5. Third: balloons, Dec 12.",
+      "timestamp": 1760000211
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Addresses? Same for all three?",
+      "timestamp": 1760000246
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "First two to 100 Finance Ave. Third to Changi Hospital Wars 24 Singapore 700339 \u2014 event site.",
+      "timestamp": 1760000294
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Actually can we do coffee and tea in the first shipment, then paper, then balloons? We need tea earlier.",
+      "timestamp": 1760000328
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "So shipment 1: 12 coffee + 30 tea, Nov 28. Shipment 2: 50 paper, Dec 5. Shipment 3: 4000 balloons, Dec 12.",
+      "timestamp": 1760000364
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Yes. Same addresses \u2014 Finance Ave for 1 and 2, Changi for 3.",
+      "timestamp": 1760000404
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Noted. Any discount discussion? Order value is high.",
+      "timestamp": 1760000436
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We want 4% off. We had a problem last time with a multi-shipment order \u2014 second delivery was short one box of tea.",
+      "timestamp": 1760000480
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "I recall we made good on that. For this order we can do 3% \u2014 $12,474.20. 4% I'd need to confirm.",
+      "timestamp": 1760000531
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're committing to three dates. We want 4%.",
+      "timestamp": 1760000580
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can do 4% if you confirm all three dates and give at least 5 business days' notice for any change. $12,345.60.",
+      "timestamp": 1760000623
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Accepted. PO-2024-11-602. Net 30 from last delivery \u2014 Dec 12.",
+      "timestamp": 1760000664
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Wait \u2014 we might need to cancel the balloon shipment. The event could be postponed. Can we lock coffee, tea, paper and leave balloons tentative?",
+      "timestamp": 1760000712
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can do shipment 1 and 2 confirmed, shipment 3 (balloons) as provisional. You'd need to confirm or cancel by Dec 5.",
+      "timestamp": 1760000759
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Okay. Confirm shipment 1 and 2. We'll advise on balloons by Dec 5.",
+      "timestamp": 1760000805
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "So SO will show three DOs; the third is conditional. If you cancel balloons we'll issue a revised SO for the first two only.",
+      "timestamp": 1760000859
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "What if we move the balloon date to Dec 19 instead of 12?",
+      "timestamp": 1760000896
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We can do Dec 19. I'll put Dec 19 on the third DO and you can still confirm or cancel by Dec 5.",
+      "timestamp": 1760000946
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Keep Dec 12 for now. We'll let you know.",
+      "timestamp": 1760000991
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Dec 12 for shipment 3. Receiving contacts?",
+      "timestamp": 1760001038
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Finance Ave +65 9123 4567. Changi +65 8765 4321, ask for Stores.",
+      "timestamp": 1760001082
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Last September you short-delivered tea on the second run. How do we avoid that again?",
+      "timestamp": 1760001122
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We've added a second verification step on multi-shipment orders. Each DO is picked and checked separately.",
+      "timestamp": 1760001158
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. We need batch numbers on packing lists for coffee and tea.",
+      "timestamp": 1760001202
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll include batch and expiry on the packing lists for shipments 1 and 2.",
+      "timestamp": 1760001256
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Invoice after the last delivery, one invoice for everything, itemised?",
+      "timestamp": 1760001306
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. One invoice after Dec 12 with all lines and DO references.",
+      "timestamp": 1760001349
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If we cancel the balloons, will the 4% still apply to the remaining amount?",
+      "timestamp": 1760001379
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "If you cancel shipment 3 the order value drops. We'd recalc \u2014 likely 3% on the coffee/tea/paper total. We'll confirm at the time.",
+      "timestamp": 1760001413
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Understood. We're hoping the event goes ahead so we'll keep balloons for now.",
+      "timestamp": 1760001445
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "SO-2024-1302 with three DOs. I'll send shortly. Confirm when received.",
+      "timestamp": 1760001495
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Can we shift shipment 2 from Dec 5 to Dec 6? Just one day.",
+      "timestamp": 1760001533
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We need 5 business days' notice for date changes or there may be a rehandling fee. If you confirm now we can set Dec 6.",
+      "timestamp": 1760001582
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Keep Dec 5. Don't want to risk a fee.",
+      "timestamp": 1760001624
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Dec 5 it is.",
+      "timestamp": 1760001666
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're planning something similar for Q1 \u2014 maybe four shipments. Would the same 4% logic apply?",
+      "timestamp": 1760001715
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "If you share a draft schedule and volumes we can confirm terms. Multi-shipment orders above a threshold typically get the same treatment.",
+      "timestamp": 1760001757
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll send something by mid-December. Thanks.",
+      "timestamp": 1760001807
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "You're welcome. We'll send separate delivery reminders 48 hours before each date.",
+      "timestamp": 1760001843
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "One more thing \u2014 if the event is cancelled and we drop balloons, do we need to send a new PO or is an email enough?",
+      "timestamp": 1760001888
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Email confirmation is enough. We'll adjust the SO and invoice accordingly.",
+      "timestamp": 1760001942
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "If we add a fourth shipment \u2014 say just paper again for Dec 19 \u2014 would that be a new PO or an amendment?",
+      "timestamp": 1760001975
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'd treat it as an amendment or a new DO under the same SO if the value is similar. Easier to amend if it's one more date.",
+      "timestamp": 1760002028
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We're not adding it. Just asking for planning.",
+      "timestamp": 1760002079
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Shipment 1 \u2014 is it one pallet or multiple for the coffee and tea?",
+      "timestamp": 1760002124
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "12 bags coffee and 30 boxes tea will go on two pallets. We'll send the pallet count on the packing list.",
+      "timestamp": 1760002158
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Our dock can take two. If it were three we'd need to schedule.",
+      "timestamp": 1760002200
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Two pallets for shipment 1. Noted.",
+      "timestamp": 1760002239
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Balloons \u2014 if we reduce from 4000 to 2000, does the price per 1000 change?",
+      "timestamp": 1760002293
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Same $3000 per 1000. So 2000 would be $6000. The 4% would apply to whatever the final order value is.",
+      "timestamp": 1760002324
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll keep 4000 for now. Event team is still confirming.",
+      "timestamp": 1760002360
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Last time the Changi delivery was in the afternoon. Can we get morning for the balloons?",
+      "timestamp": 1760002403
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We'll request morning slot for DO-3. Can't guarantee but we'll try.",
+      "timestamp": 1760002450
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Thanks. They need to set up the venue in the afternoon.",
+      "timestamp": 1760002485
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood.",
+      "timestamp": 1760002526
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Who do we contact if there's an issue on the day \u2014 same number as order placement?",
+      "timestamp": 1760002563
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Yes. Or the number on the delivery note. We'll include a contact for day-of issues.",
+      "timestamp": 1760002601
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Good. We'll wait for the SO and the three DOs.",
+      "timestamp": 1760002652
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Can shipment 2 include a few boxes of tea for our other site? Same PO or separate?",
+      "timestamp": 1760002689
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "We could add tea to shipment 2 and ship to a second address with a split. We'd need the second address and quantity.",
+      "timestamp": 1760002735
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "Forget it \u2014 we'll order for the other site separately next month.",
+      "timestamp": 1760002780
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "Understood.",
+      "timestamp": 1760002821
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "What's the latest we can confirm or cancel the balloon shipment without any charge?",
+      "timestamp": 1760002859
+    },
+    {
+      "from_whom": "(TEAM1)",
+      "body": "By Dec 5 close of business. After that we may have already allocated stock and there could be a restock fee.",
+      "timestamp": 1760002897
+    },
+    {
+      "from_whom": "(TEAM2)",
+      "body": "We'll decide by Dec 4. Thanks.",
+      "timestamp": 1760002932
+    }
+  ]
+}
