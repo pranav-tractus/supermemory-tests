@@ -1,0 +1,1288 @@
+# Model comparison — Total runs, accuracy & efficiency
+
+Source: `claude_bedrock_test.md`
+
+---
+
+## Overview
+
+- **Total runs:** 360
+- **Chats:** 9 — `multiple_product_multiple_shipment_complex.json`, `multiple_product_multiple_shipment_medium.json`, `multiple_product_multiple_shipment_simple.json`, `single_product_multiple_shipment_complex.json`, `single_product_multiple_shipment_medium.json`, `single_product_multiple_shipment_simple.json`, `single_product_single_shipment_complex.json`, `single_product_single_shipment_medium.json`, `single_product_single_shipment_simple.json`
+- **Models:** 4 — `claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]`, `claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]`, `claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]`, `claude (us.anthropic.claude-sonnet-4-6) [Bedrock]`
+- **Correct:** 53 | **Incorrect:** 307 | **N/A:** 0
+
+---
+
+## Total runs by model (accuracy & efficiency)
+
+
+| Model                                                           | Total runs | Correct | Incorrect | Failed | N/A | Avg score | Min | Max | Perfect (≥95) | Avg time (s) | Min  | Max   |
+| --------------------------------------------------------------- | ---------- | ------- | --------- | ------ | --- | --------- | --- | --- | ------------- | ------------ | ---- | ----- |
+| claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]   | 90         | 20      | 70        | 0      | 0   | 87.1      | 22  | 100 | 50/90         | 8.29         | 3.68 | 29.64 |
+| claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]              | 90         | 10      | 80        | 0      | 0   | 88.2      | 23  | 99  | 60/90         | 6.34         | 3.81 | 11.68 |
+| claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock] | 90         | 13      | 77        | 0      | 0   | 79.9      | 16  | 99  | 55/90         | 5.72         | 3.55 | 9.89  |
+| claude (us.anthropic.claude-sonnet-4-6) [Bedrock]               | 90         | 10      | 80        | 0      | 0   | 86.0      | 23  | 99  | 60/90         | 6.62         | 3.97 | 20.00 |
+
+
+**Score:** 0–100 by closeness to expected: 25 pts for correct contract count; 75 pts from per-field similarity (description, quantity, total, date, address). Partial credit for near matches. **Perfect:** score ≥ 95.
+
+---
+
+## Errors (model mistakes only)
+
+### Incorrect runs (expected vs actual mismatches)
+
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4.14
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4.14
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4140.0
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4140.0
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4140.0
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4140.0
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4.14
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4.14
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4140.0
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4140.0
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4.14
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4.14
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4140.0
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4140.0
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4.14
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4.14
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4140.0
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4140.0
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 items: expected 2, got 3
+  - Contract #3 item #1 quantity: expected 3000.0, got 1500.0
+  - Contract #3 item #1 total: expected 8280.0, got 4140.0
+  - Contract #3 item #2 description: expected 'Sanitizer', got 'White Balloons'
+  - Contract #3 item #2 quantity: expected 100.0, got 1500.0
+  - Contract #3 item #2 total: expected 920.0, got 4140.0
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_3_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31, 2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31, 2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_10_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_1_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_2_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_3_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_4_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_5_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_6_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_7_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_8_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-5_run_9_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-5_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_10_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_1_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_2_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_3_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_4_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_5_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_6_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_7_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_8_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-5_run_9_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_10_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_1_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_2_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_3_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_4_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_5_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_6_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_7_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_8_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-5_run_9_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-5-20251101-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-5_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_3_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-opus-4-6-v1) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_opus-4-6_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-28'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract #2 item #1 total: expected 342.0, got 324.0
+  - Contract #2 item #2 total: expected 190.0, got 208.0
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31, 2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31, 2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 total: expected 375.0, got 175.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31, 2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31, 2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-5-20250929-v1:0) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-5_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 329.4
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 description: expected 'Red Balloons', got 'Balloons (1500 Red, 1500 White)'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 description: expected 'Red Balloons', got 'Balloons (1500 Red, 1500 White)'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 360.0
+  - Contract #2 item #2 total: expected 184.0, got 200.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 360.0
+  - Contract #2 item #2 total: expected 184.0, got 200.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 description: expected 'Red Balloons', got 'Balloons (1500 Red, 1500 White)'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 360.0
+  - Contract #2 item #2 total: expected 184.0, got 200.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 item #1 total: expected 342.0, got 360.0
+  - Contract #2 item #2 total: expected 190.0, got 200.0
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `multiple_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2 item #1 total: expected 240.0, got 4800.0
+  - Contract #2 do_date: expected one of '2026-03-31', got '2026-04-30'
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_complex.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_medium.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_multiple_shipment_simple.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 375.0, got 200.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_complex.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **claude (us.anthropic.claude-sonnet-4-6) [Bedrock]** — `single_product_single_shipment_medium.json` (`claude_sonnet-4-6_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+

@@ -1,0 +1,424 @@
+# Model comparison — Total runs, accuracy & efficiency
+
+Source: `gpt54_new_prompt.md`
+
+---
+
+## Overview
+
+- **Total runs:** 90
+- **Chats:** 9 — `multiple_product_multiple_shipment_complex.json`, `multiple_product_multiple_shipment_medium.json`, `multiple_product_multiple_shipment_simple.json`, `single_product_multiple_shipment_complex.json`, `single_product_multiple_shipment_medium.json`, `single_product_multiple_shipment_simple.json`, `single_product_single_shipment_complex.json`, `single_product_single_shipment_medium.json`, `single_product_single_shipment_simple.json`
+- **Models:** 1 — `openai (gpt-5.4-2026-03-05)`
+- **Correct:** 10 | **Incorrect:** 80 | **N/A:** 0
+
+---
+
+## Total runs by model (accuracy & efficiency)
+
+
+| Model                       | Total runs | Correct | Incorrect | Failed | N/A | Avg score | Min | Max | Perfect (≥95) | Avg time (s) | Min  | Max  |
+| --------------------------- | ---------- | ------- | --------- | ------ | --- | --------- | --- | --- | ------------- | ------------ | ---- | ---- |
+| openai (gpt-5.4-2026-03-05) | 90         | 10      | 80        | 0      | 0   | 63.2      | 14  | 99  | 24/90         | 3.53         | 2.13 | 7.00 |
+
+
+**Score:** 0–100 by closeness to expected: 25 pts for correct contract count; 75 pts from per-field similarity (description, quantity, total, date, address). Partial credit for near matches. **Perfect:** score ≥ 95.
+
+---
+
+## Errors (model mistakes only)
+
+### Incorrect runs (expected vs actual mismatches)
+
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_10_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 5
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_1_new`):
+  - Contract #1 item #1 total: expected 276.0, got 3600.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 10800.0
+  - Contract #2 item #2 total: expected 184.0, got 10000.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_2_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 5
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_3_new`):
+  - Contract #1 item #1 total: expected 276.0, got 3600.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 10800.0
+  - Contract #2 item #2 total: expected 184.0, got 10000.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_4_new`):
+  - Contract #1 item #1 total: expected 276.0, got 3600.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 10800.0
+  - Contract #2 item #2 total: expected 184.0, got 10000.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_5_new`):
+  - Contract #1 item #1 total: expected 276.0, got 3600.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 10800.0
+  - Contract #2 item #2 total: expected 184.0, got 10000.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_6_new`):
+  - Contract #1 item #1 total: expected 276.0, got 3600.0
+  - Contract #1 do_date: expected one of '2026-11-28', got '2026-02-28'
+  - Contract #2 item #1 total: expected 331.2, got 10800.0
+  - Contract #2 item #2 total: expected 184.0, got 10000.0
+  - Contract #2 do_date: expected one of '2026-12-05', got '2026-03-05'
+  - Contract #3 item #1 total: expected 8280.0, got 9000.0
+  - Contract #3 item #2 total: expected 920.0, got 1000.0
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_7_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 5
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_8_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 5
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_complex.json` (`openai_5_4_run_9_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 5
+  - Contract #1 item #1 total: expected 276.0, got 300.0
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_10_new`):
+  - Contract count: expected 2, got 3
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 items: expected 2, got 1
+  - Contract #2 item #1 description: expected 'Assam tea', got 'KNM Coffee'
+  - Contract #2 item #1 quantity: expected 30.0, got 12.0
+  - Contract #2 item #1 total: expected 342.0, got 3102.0
+  - Contract #2 item #2: missing in actual
+  - Contract #2 do_date: expected one of '2026-03-05', got '2026-02-28'
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-05'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_2_new`):
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 3420.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-05'
+  - Contract #2 items: expected 2, got 1
+  - Contract #2 item #1 description: expected 'Assam tea', got 'KNM Coffee'
+  - Contract #2 item #1 quantity: expected 30.0, got 12.0
+  - Contract #2 item #1 total: expected 342.0, got 3420.0
+  - Contract #2 item #2: missing in actual
+  - Contract #2 do_date: expected one of '2026-03-05', got '2026-02-28'
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_3_new`):
+  - Contract count: expected 2, got 3
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2 items: expected 2, got 1
+  - Contract #2 item #1 description: expected 'Assam tea', got 'KNM Coffee'
+  - Contract #2 item #1 quantity: expected 30.0, got 12.0
+  - Contract #2 item #1 total: expected 342.0, got 300.0
+  - Contract #2 item #2: missing in actual
+  - Contract #2 do_date: expected one of '2026-03-05', got '2026-02-28'
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_5_new`):
+  - Contract #1 item #1 total: expected 285.0, got 3420.0
+  - Contract #2 item #1 total: expected 342.0, got 10260.0
+  - Contract #2 item #2 total: expected 190.0, got 9500.0
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 300.0
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_7_new`):
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 3420.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-05'
+  - Contract #2 items: expected 2, got 1
+  - Contract #2 item #1 description: expected 'Assam tea', got 'KNM Coffee'
+  - Contract #2 item #1 quantity: expected 30.0, got 12.0
+  - Contract #2 item #1 total: expected 342.0, got 3420.0
+  - Contract #2 item #2: missing in actual
+  - Contract #2 do_date: expected one of '2026-03-05', got '2026-02-28'
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_8_new`):
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 3420.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-05'
+  - Contract #2 items: expected 2, got 1
+  - Contract #2 item #1 description: expected 'Assam tea', got 'KNM Coffee'
+  - Contract #2 item #1 quantity: expected 30.0, got 12.0
+  - Contract #2 item #1 total: expected 342.0, got 3420.0
+  - Contract #2 item #2: missing in actual
+  - Contract #2 do_date: expected one of '2026-03-05', got '2026-02-28'
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_medium.json` (`openai_5_4_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #1 item #1 total: expected 285.0, got 3420.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-05'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_3_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 item #1 total: expected 250.0, got 2500.0
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `multiple_product_multiple_shipment_simple.json` (`openai_5_4_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-200', got 'PO-2025-11-200'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_10_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_1_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_2_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 item #1 quantity: expected 14.0, got 32.0
+  - Contract #1 item #1 total: expected 318.5, got 728.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-10'
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_3_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_4_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_5_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_6_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 items: expected 1, got 3
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_7_new`):
+  - Contract #2 do_date: expected one of '2026-03-12', got '2026-03-04'
+  - Contract #3 do_date: expected one of '2026-03-18', got '2026-03-10'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_8_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 item #1 quantity: expected 14.0, got 32.0
+  - Contract #1 item #1 total: expected 318.5, got 728.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-10'
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_complex.json` (`openai_5_4_run_9_new`):
+  - Contract count: expected 3, got 1
+  - Contract #1 item #1 quantity: expected 14.0, got 32.0
+  - Contract #1 item #1 total: expected 318.5, got 728.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-10'
+  - Contract #2: missing in actual
+  - Contract #3: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_10_new`):
+  - Contract #1 item #1 quantity: expected 12.0, got 20.0
+  - Contract #1 item #1 total: expected 285.0, got 475.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #2 item #1 quantity: expected 8.0, got 20.0
+  - Contract #2 item #1 total: expected 190.0, got 475.0
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_1_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_2_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_3_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_5_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_6_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_7_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_8_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_medium.json` (`openai_5_4_run_9_new`):
+  - Contract #1 items: expected 1, got 2
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_10_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_1_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_2_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_3_new`):
+  - Contract count: expected 2, got 3
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2 item #1 quantity: expected 7.0, got 8.0
+  - Contract #2 item #1 total: expected 375.0, got 200.0
+  - Contract #2 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_4_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_5_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_6_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_7_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_8_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_multiple_shipment_simple.json` (`openai_5_4_run_9_new`):
+  - Contract count: expected 2, got 1
+  - Contract #1 item #1 quantity: expected 8.0, got 15.0
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-04-30'
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-150', got 'PO-2025-11-150'
+  - Contract #2: missing in actual
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_10_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_1_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_2_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_3_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_4_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_5_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_6_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_7_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_8_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_complex.json` (`openai_5_4_run_9_new`):
+  - Contract #1 po_ref_no: expected one of 'PO-2024-11-501', got 'PO-2025-11-501'
+  - Contract #1 shipping_address: expected one of ['100 Finance Ave', '100 Finance Ave Singapore 018989'], got '352 Indiana Jones St.'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_10_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_1_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_2_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_3_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_4_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_5_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_6_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_7_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_8_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+- **openai (gpt-5.4-2026-03-05)** — `single_product_single_shipment_medium.json` (`openai_5_4_run_9_new`):
+  - Contract #1 do_date: expected one of '2026-02-28', got '2026-03-31'
+
